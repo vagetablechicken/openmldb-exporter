@@ -35,7 +35,8 @@ jobs:
         run: |
           sleep 60
           docker compose --file docker-compose.yml ps -a
-          docker compose --file docker-compose.yml exec cat logs/*
+          docker compose --file docker-compose.yml exec openmldb_ns1 cat logs/*
+          docker compose --file docker-compose.yml exec openmldb_ns2 cat logs/*
 
       - name: verbose exporter log
         run: |
