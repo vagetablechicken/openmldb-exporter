@@ -35,7 +35,7 @@ jobs:
         run: |
           sleep 60
           docker compose --file docker-compose.yml ps -a
-          docker compose --file docker-compose.yml logs
+          docker compose --file docker-compose.yml exec cat logs/*
 
       - name: verbose exporter log
         run: |
